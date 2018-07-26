@@ -11,7 +11,7 @@
         <param name ="image_height" value="240" />
     </node>
 
-    <node pkg="mjpeg_server" name = "mjpeg_server" type="mjpeg_server" >
+    <node pkg="web_video_server" name = "web_video_server" type="web_video_server" >
         <param name="port" value="10000" />
     </node>
 </launch>
