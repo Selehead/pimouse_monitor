@@ -45,6 +45,8 @@ $('#motor_off').on('click', function(e){
             if(result.success){
                     $('#motor_on').attr('class','btn btn-default');
                     $('#motor_off').attr('class','btn btn-primary');
+                    $('#vel_fw').html("0");
+                    $('#vel_rot').html("0");
             }
         });
 });
@@ -68,10 +70,12 @@ function pubMotorValues(){
 $('#touchmotion').on('click',function(e){
         rect = $('#touchmotion')[0].getBoundingClientRect();
         x = e.pageX - rect.left - window.pageXOffset;
-        y = e.pagey - rect.top - window.pageYOffset;
+        y = e.pageY - rect.top - window.pageYOffset;
+        $('#xdisp').html(parseInt(x));
+        $('#ydisp').html(parseInt(y));
 
-        vel_fw = (rect.height/2 - y)*3;
-        vel_rot = rect.width/2 - x;
+        vel_fw = (rect.height/2 - y)*1;
+        vel_rot =(rect.width/2 - x)*0.5;
         $('#vel_fw').html(parseInt(vel_fw));
         $('#vel_rot').html(parseInt(vel_rot));
 });

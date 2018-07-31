@@ -6,9 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; -->
         <title>pimouse_monitor</title>  <!--変更-->
-
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #touchmotion{border:solid 2px black;} 
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -41,9 +43,12 @@
                         <button type="button" class="btn btn-danger" id="motor_on">on</button>
                         <button type="button" class="btn btn-primary" id="motor_off">off</button>
                     </h2>
-                    <div id="touchmotion" class="well" style="width:300px;height:300px;cursor:Pointer">
+                    <div id="touchmotion" class="well" style="width:300px;height:300px;cursor:Pointer;background:orange">
                         <span id="vel_fw">0</span>[mm/s]&nbsp;&nbsp;&nbsp;<span id="vel_rot">0</span>[deg/s]
+                        <hr style="height:1px;margine:150">
                     </div>
+                    <div id="xdisp" ></div>
+                    <div id="ydisp" ></div>
                 </div>
             </div>
         </div>
