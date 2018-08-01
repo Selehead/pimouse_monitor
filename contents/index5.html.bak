@@ -9,7 +9,24 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <style> 
-            #touchmotion{border:solid 2px black;}     
+            #touchmotion{border:solid 2px black;} 
+            #touchbox1{
+                border:solid;
+                width:300px;
+                height:300px;
+                color:black;
+                position:static;
+                left:0px;
+                top:0px;
+            }
+            #touchbox2{
+                width:300px;
+                height:300px;
+                color:#2baff2;
+                position:static;
+                left:150px;
+                top:150px;
+            }
         </style>
     </head>
     <body>
@@ -36,7 +53,7 @@
                 </div>
                 <div class="col-md-4">
                     <h2>Camera</h2>
-                    <object id="camstream" style="width:300px;height:240px;" ></object>
+                    <object id="camstream" style="width:300px;height:240px" ></object>
                 </div>
                 <div class="col-md-4">
                     <h2>Motors
@@ -46,25 +63,10 @@
                     <div>
                         <span id="vel_fw">0</span>[mm/s]&nbsp;&nbsp;&nbsp;<span id="vel_rot">0</span>[deg/s]
                     </div>
-              
                     <div id="touchmotion" class="well" style="width:300px;height:300px;cursor:Pointer;">
-
-                        <div class="well" style="width:150px;height:150px;
-                                                         border:solid 1px;
-                                                         color:black;
-                                                         position:relative;
-                                                         left:-1px;
-                                                         top:-1px;"></div>
-                       
-                        <div class="well" style="width:150px;height:150px;
-                                                         border:solid 1px;
-                                                         color:black;
-                                                         position:relative;
-                                                         left:148px;
-                                                         top:-2px;"></div>
-                        
+                        <span id="touchbox1"></span>
+                        <span id="touchbox2"></spa>
                     </div>
-                   
                     <div id="xdisp" ></div>
                     <div id="ydisp" ></div>
                 </div>
